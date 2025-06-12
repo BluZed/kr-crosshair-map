@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krunk Crosshair Map</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="main-container">
+        <p id="main-title">Krunk Crosshair Map</p>
+        <div class="display-tab" id="setsinput">
+            <div class="setts-instructions">
+                <p class="instructionsheader">Instructions</p>
+                <pre>
+                    1. Copy/Export your settings from krunker.
+                    2. Paste/Upload them in the input box below.
+                    3. Click on Submit.
+                </pre>
+            </div>
+            <div class="btns-row">
+                <button class="btn" id="uploadsetts">Upload</button>
+            </div>
+            <input id="settings_input" placeholder="Enter your settings here.." type="text">
+            <div class="btns-row">
+                <button class="btn" id="submitsetts">Submit</button>
+            </div>
+        </div>
+        <div class="display-tab" id="error" style="display: none;">
+            <p style="font-size:1.5rem; color:rgb(236, 72, 72);">Error</p>
+            <div id="errormsg">idk what happened</div>
+        </div>
+    </div>
+    <div id="file-input" style="display: none;">
+        <div style="margin: auto;">
+            <input id="uploadfileinput" type="file">
+            <button class="btn" id="canceluploadfile">Cancel</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

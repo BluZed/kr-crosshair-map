@@ -1,13 +1,10 @@
-let crossSetts = (new URLSearchParams(location.search.replace("?", ""))).get("q");
-if (crossSetts) {
-    try {
-        crossSetts = JSON.parse(crossSetts);
-    } catch (error) {
-        console.log(error, crossSetts);
-        showError("Crosshair settings are not valid json. Check console for details.");
-    }
-} else {
-    showError("Crosshair settings not present in URL.")
+let crossSetts;
+try{
+    crossSetts = JSON.parse(decodeURIComponent((location.href.slice(location.href.indexOf("?q=")+ 3))));
+} catch {
+    crossSetts = false;
+    console.log(error);
+    showError("Crosshair settings are not valid json. Check console for details.");
 }
 
 const uploadbtn = document.getElementById("uploadsetts");
